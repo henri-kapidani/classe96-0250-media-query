@@ -1,0 +1,155 @@
+/* GENERAL STYLES */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+/* (Slide 15) mobile first */
+.test-1 .box {
+	margin: 1rem;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+}
+
+/* @media screen, print and (max-width: 300px) or (min-width: 479px) { */
+@media (min-width: 479px) {
+	.test-1 {
+		display: flex;
+	}
+
+	.test-1 .box {
+		background-color: salmon;
+	}
+}
+
+/* @media print {
+	.test-1 .box {
+		background-color: transparent;
+		border: 3px solid black;
+	}
+} */
+
+
+/* (Slide 16) desktop first */
+.test-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.test-2 img {
+	border: 2px solid red;
+	width: 200px;
+}
+
+@media (max-width: 780px) {
+	.test-2 {
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 568px) {
+	.test-2 {
+		/* width: 200px;
+		margin-inline: auto; */
+
+		flex-direction: column;
+	}
+}
+
+
+/* (Slide 17) desktop first */
+.test-3 {
+	padding: 3rem;
+}
+
+.test-3 .item {
+	background-color: blue;
+	width: 200px;
+	height: 200px;
+}
+
+@media (max-width: 480px) {
+	.test-3 .item {
+		border-radius: 200px;
+	}
+}
+
+
+/* (Slide 18) mobile first */
+.test-4 {
+	padding: 3rem;
+}
+
+.test-4 .box {
+	height: 200px;
+	background-color: green;
+}
+
+@media (min-width: 480px) {
+	.test-4 .box {
+		background-color: blue;
+	}
+}
+
+@media (min-width: 1440px) {
+	.test-4 .box {
+		background-color: red;
+	}
+}
+
+
+/* (Slide 19) mobile first */
+.test-5 {
+	padding: 3rem;
+}
+
+/* @media (min-height: 780px) { */
+@media (min-width: 780px) {
+	.test-5 ul {
+		display: flex;
+		gap: .5rem;
+		color: white;
+		list-style: none;
+	}
+
+	.test-5 li {
+		padding: .5em .7em;
+		background-color: grey;
+	}
+}
+
+
+/* (Slide 20) mobile first */
+
+.test-6 .box {
+	height: 200px;
+	background-color: blue;
+}
+
+.test-6 .inner {
+	display: none;
+}
+
+@media (min-width: 580px) {
+	.test-6 .inner {
+		display: flex;
+		gap: .5rem;
+		margin-left: 20%;
+		padding: 1rem;
+		height: 100%;
+		background-color: green;
+	}
+
+	.test-6 .child {
+		background-color: white;
+		flex-grow: 1;
+	}
+}
